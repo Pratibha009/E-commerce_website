@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylike</title>
+    <link rel="shortcut icon" href="stylike.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <body>
+
+        <!-- header -->
+        <header>
+            <div class="navbar">
+                <div class="nav_logo">
+                    <div class="logo"></div>
+                </div>
+    
+                <div class="search">
+                    <div class="search-container">
+                        <form class="d-flex" role="search">
+                            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            <input type="text" class="search-box" placeholder="search for products, Brands and more">
+                        </form>
+                    </div>
+                </div>
+    
+                <div class="login">
+                    <div class="login-items">
+    
+                        <i class="fa-regular fa-user"></i>
+                        <a href="" id="login-link"> Login</a>
+                        <!-- <div class="dropdown"> -->
+                            <a href=""><i class="fa-solid fa-chevron-down"></i></a>
+                           
+                        <!-- </div> -->
+    
+                    </div>
+    
+                </div>
+    
+            
+    
+                <div class="cart">
+                    <!-- <div class="Bag"> -->
+                        <!-- <i class="fa-solid fa-cart-shopping"></i>
+                        <p>Cart</p> -->
+                        <a href="cartPage.html" id="cart-link"><i class="fas fa-shopping-cart"></i> Cart (0)</a>
+                    <!-- </div> -->
+                </div>
+    
+                <div class="become-seller">
+                    <div class="seller">
+                        <p>Become a seller</p>
+                    </div>
+                </div>
+    
+                <div class="more">
+                    <div class="options">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+    
+                </div>
+    
+            </div>
+           
+        </header>
+
+        <main>
+            <div class="products">
+                <div class="grocery">
+                    <div class="grocery-item">
+                        <div class="images">
+                            <img src="grocery.jpg" alt="grocery" height="100%" width="100%">
+                            <p>Grocery</p>
+                        </div>
+    
+                    </div>
+    
+                </div>
+    
+                <!-- <div class="mobiles">
+                    <div class="images">
+                        <img src="smartphones.jpg" alt="mobiles" height="100%" width="100%">
+                        <p>Mobiles</p>
+                    </div>
+                </div> -->
+    
+                <div class="fashion">
+                    <div class="images">
+                        <img src="fashions.avif" alt="fashion" height="100%" width="100%">
+                        <p>Fashion</p>
+                    </div>
+                </div>
+    
+                <!-- <div class="electronics">
+                    <div class="images">
+                        <img src="electronics.jpeg" alt="fashion" height="100%" width="100%">
+                        <p>Electronics</p>
+                    </div>
+                </div> -->
+    
+                <div class="home-Furniture">
+                    <div class="images">
+                        <img src="furnituree.jpg" alt="fashion" height="100%" width="100%">
+                        <p>Home Furniture</p>
+                    </div>
+                </div>
+    
+                <!-- <div class="appliances">
+                    <div class="images">
+                        <img src="appliances.jpg" alt="appliances" height="100%" width="100%">
+                        <p>Appliances</p>
+                    </div>
+                </div> -->
+    
+                <!-- <div class="travel">
+                    <div class="images">
+                        <img src="travelimg.webp" alt="travel img" height="100%" width="100%">
+                        <p>travel</p>
+                    </div>
+                </div>
+     -->
+                <div class="beauty-toys-more">
+                    <div class="images">
+                        <img src="beau.jpg" alt="Beauty Product" height="100%" width="100%">
+                        <p>Beauty,toys and more</p>
+                    </div>
+                </div>
+    
+                <!-- <div class="two-wheelers">
+                    <div class="images">
+                        <img src="bike.png" alt="Bike" height="100%" width="100%">
+                        <p>Two wheeler</p>
+                    </div>
+                </div> -->
+            </div>
+            <br>
+    
+            <div class="slider">
+                <div class="slide">
+                  <img src="furniture.jpg" alt="Image 1">
+                </div>
+                <div class="slide">
+                  <img src="beauty.jpg" alt="Image 2">
+                </div>
+                <div class="slide">
+                  <img src="electronics.jpeg" alt="Image 3">
+                </div>
+                <!-- Add more slides as needed -->
+                <div class="navigation-button">
+                  <span class="dot active" onclick="changeSlide(0)"></span>
+                  <span class="dot" onclick="changeSlide(1)"></span>
+                  <span class="dot" onclick="changeSlide(2)"></span>
+                  <!-- Add more dots as needed -->
+                </div>
+              </div>
+
+
+                <div class="box2">
+                    <h3>Beauty, Food, Toys & more</h3>
+                </div>
+        
+                <div class="box-2">
+                    <!-- <div class="product-1">
+                        <div class="e-img">
+                            <img src="exercise-trademill.webp" alt="taademill" height="100%" width="100%">
+                        </div>
+                        <div class="para">
+                            <div class="para1">
+                                <p>Trademill, Exercise-bikes ...</p>
+                            </div>
+                            <div class="para2">
+                                <p>Up to 70% Off</p>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- <div class="product-2">
+                        <div class="e-img">
+                            <img src="gayer-cycle.jpg" alt="gayer-cycle" height="100%" width="100%">
+                        </div>
+                        <div class="para">
+                            <div class="para1">
+                                <p>Geared cycle</p>
+                            </div>
+                            <div class="para2">
+                                <p>Up to 70% Off</p>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="product-3">
+                        <div class="e-img">
+                            <img src="stationery.jpg" alt="stationery" height="100%" width="100%">
+                        </div>
+                        <div class="para">
+                            <div class="para1">
+                                <p>Top Selling stationery</p>
+                            </div>
+                            <div class="para2">
+                                <p>From ₹49</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-4">
+                        <div class="e-img">
+                            <img src="remote-control-car.jpg" alt="remote-control-car" height="100%" width="100%">
+                        </div>
+                        <div class="para">
+                            <div class="para1">
+                                <p>Remote control Toys</p>
+                            </div>
+                            <div class="para2">
+                                <p>Up to 80% Off</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-5">
+                        <div class="e-img">
+                            <img src="teddy.jpg" alt="teddy" height="100%" width="100%">
+                        </div>
+                        <div class="para">
+                            <div class="para1">
+                                <p>soft Toys</p>
+                            </div>
+                            <div class="para2">
+                                <p>Up to 70% Off</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-6">
+                        <div class="e-img">
+                            <img src="superman.webp" alt="superman" height="100%" width="100%">
+                        </div>
+                        <div class="para">
+                            <div class="para1">
+                                <p>Action Toys</p>
+                            </div>
+                            <div class="para2">
+                                <p>Up to 70% Off</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <script src="script.js"></script>
+            </main>
+        
+        
+            <footer>
+                <div class="footer">
+                    <div class="footer-container">
+                        <div class="footer-divs">
+                            <p id="f-hd">About</p>
+                            <p id="f-D">About us</p>
+                            <p id="f-D">Contact Us</p>
+                        </div>
+                        <div class="footer-divs">
+                            <p id="f-hd">Group Companies</p>
+                            <p id="f-D"><a id="anchor" href="https://www.myntra.com/"> myntra</a></p>
+                            <p id="f-D"><a id="anchor" href="https://www.Shopsy.in/"> Shopsy</a></p>
+                        </div>
+                        <div class="footer-divs">
+                            <p id="f-hd">HELP</p>
+                            <p id="f-D"><a id="anchor" href="">Payment</a></p>
+                            <p id="f-D"><a id="anchor" href="">Shipping</a></p>
+                            <p id="f-D"><a id="anchor" href="">Cancellation & Returns</a></p>
+                        </div>
+                        <div class="footer-divs">
+                            <p id="f-hd">Consumer Policy</p>
+                            <p id="f-D"><a id="anchor" href="">Cancellation & Returns</a></p>
+                            <p id="f-D"><a id="anchor" href=""> Terms of use</a></p>
+                            <p id="f-D"><a id="anchor"href="">Privacy</a></p>
+                            <p id="f-D"><a id="anchor" href="">Security</a></p>
+                        </div>
+                        <div class="footer-divs-4">
+                            <p id="f-hd">Mail Us:</p>
+                            <p id="f-D-4">Arrows Internet Private Limited, Main Chownk, Talab Tillo, 180002, J&K, India </p>
+                            <p id="f-hd">Social:</p>
+                          <pre><p id="icon"><a id="anchor" href="https://www.instagram.com/_.pratibha._09/"><i class="fa-brands fa-instagram" ></i></a>    <i class="fa-brands fa-x-twitter"></i>    <a id="anchor" href="https://www.facebook.com/profile.php?id=100074129723953"><i class="fa-brands fa-facebook"></i></pre></a>
+                            </p>
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="f-end">
+                        <div>
+                           <p id="f-D"> Become a seller</p>
+                        </div>
+                        <div>
+                            <pre><p id="f-D"> <i id="icons" class="fa-solid fa-gift"></i>  Gift Card</p></pre>
+                        </div>
+                        <div>
+                            <pre><p id="f-D"> <i id="icons" class="fa-regular fa-circle-question"></i>  Help center</p></pre>
+                        </div>
+                        <div>
+                            <p id="f-D"> 2024 Arrows.in</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </footer>
+</body>
+</html>
