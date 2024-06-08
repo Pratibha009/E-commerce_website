@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<link rel="stylesheet" href="style.css">
+    <style>
+        body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.container {
+  width: 300px;
+  margin: 40px auto;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-form {
+  text-align: center;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"], input[type="password"] {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+  width: 100%;
+  height: 40px;
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+p {
+  margin-top: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #4CAF50;
+}
+
+a:hover {
+  color: #3e8e41;
+}
+
+#login-error-msg {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+#error-msg-second-line {
+  display: block;
+  margin-top: 10px;
+}
+    </style>
+</head>
+<body>
+	<div class="container">
+		<div class="login-form">
+			<h2>Login</h2>
+			<form>
+				<label for="username">Username:</label>
+				<input type="text" id="username" name="username"><br><br>
+				<label for="password">Password:</label>
+				<input type="password" id="password" name="password"><br><br>
+				<input type="submit" value="Login">
+				<p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
+			</form>
+			<p>Don't have an account? <a href="signup.html">Sign up</a></p>
+		</div>
+	</div>
+
+    <script>
+        // Get the modal elements
+const loginModal = document.getElementById('loginModal');
+const signUpModal = document.getElementById('signupModal');
+
+// Get the forms
+const loginForm = loginModal.querySelector('form');
+const signUpForm = signUpModal.querySelector('form');
+
+// Add event listeners to the forms
+loginForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const email = loginForm.querySelector('#floatingInput').value;
+  const password = loginForm.querySelector('#floatingPassword').value;
+
+  // Client-side validation
+  if (email && password) {
+    // Send a request to the server to login
+    // Replace with your actual API endpoint
+    fetch('/api/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password }),
+    })
+    .then((response) => response.json())
+    .then((data) => {
+        if (data.success) {
+          // Login successful, close the modal and redirect to the dashboard
+          loginModal.classList.remove('show');
+          window.location.href = '/dashboard';
+        } else {
+          // Login failed, display an error message
+          alert('Invalid email or password');
+        }
+      })
+    .catch((error) => {
+        console.error(error);
+      });
+  } else {
+    alert('Please fill in all the fields');
+  }
+});
+    </script>
+</body>
+</html>

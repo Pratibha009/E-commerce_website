@@ -84,6 +84,10 @@
     display: flex;
     align-items: center;
   }
+
+  .login:hover {
+    background-color: #8c9056;
+  }
   
   .fa-regular.fa-user {
     font-size: 18px;
@@ -445,7 +449,7 @@
 }
 
 #f-hd{
-    color: #2F2F2F;
+    color: #1c1c1c;
     margin: 0 0 12px;
 }
 #f-D{
@@ -483,4 +487,47 @@
 
 #icons{
     color: goldenrod;
+}
+
+
+
+
+/* add-to-cart */
+.price {
+  font-weight: bold;
+  color: #337ab7;
+}
+
+.add-to-cart,.Buy-Now {
+  /* background-color: #337ab7; */
+  background-color: transparent;
+  border: 1px solid #454d5e ;
+  color: #333;
+  padding: 10px 20px;
+  /* border: none; */
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.add-to-cart:hover ,.Buy-Now:hover{
+  background-color: #158df5;
+}
+
+
+.f-end-n{
+  height: 68px;
+  padding: 20px 0 ;
+  font-size: 14px;
+  margin: 20px 0 0 ;
+  border-top: 1px solid #454d5e;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #dbd887;
+}
+
+
+#fashion{
+  height: 450px;
 }
