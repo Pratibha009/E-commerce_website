@@ -95,6 +95,44 @@ a:hover {
 		</div>
 	</div>
 
-    <script src="script.js"></script>
+    <script>
+      const form = document.querySelector('form');
+const usernameInput = document.querySelector('#username');
+const passwordInput = document.querySelector('#password');
+const loginErrorMsg = document.querySelector('#login-error-msg');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const email = usernameInput.value;
+  const password = passwordInput.value;
+
+  if (!validateEmail(email)) {
+    loginErrorMsg.style.opacity = 1;
+    loginErrorMsg.textContent = 'Invalid email format';
+    return;
+  }
+
+  if (!validatePassword(password)) {
+    loginErrorMsg.style.opacity = 1;
+    loginErrorMsg.textContent = 'Password must be at least 8 characters long, contain at least one lowercase letter, one uppercase letter, and one digit';
+    return;
+  }
+
+  // If the email and password are valid, refresh the page
+  location.reload();
+});
+
+function validateEmail(email) {
+  const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
+}
+
+function validatePassword(password) {
+  const re = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+  return re.test(password);
+}
+
+    </script>
 </body>
 </html>

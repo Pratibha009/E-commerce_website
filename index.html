@@ -166,8 +166,9 @@
                 </div>
             </div>
 
+            
 
-
+            
 
             <div class="child-section">
                 <div class="box2">
@@ -234,7 +235,18 @@
             </div></a>
 
 
-            <script src="script.js"></script>
+            <script>
+                function changeSlide(index) {
+                    var slides = document.querySelectorAll('.slide');
+                    var dots = document.querySelectorAll('.dot');
+                    for (var i = 0; i < slides.length; i++) {
+                        slides[i].style.display = 'none';
+                        dots[i].classList.remove('active');
+                    }
+                    slides[index].style.display = 'block';
+                    dots[index].classList.add('active');
+                }
+            </script>
 
 
 
@@ -246,15 +258,19 @@
                 <div class="footer-container">
                     <div class="footer-divs">
                         <p id="f-hd">About</p>
-                        <a id="anchor" href="about.html"><p id="f-D">About us</p></a>
-                        <a id="anchor" href="contact.html"><p id="f-D">Contact Us</p></a>
+                        <a id="anchor" href="about.html">
+                            <p id="f-D">About us</p>
+                        </a>
+                        <a id="anchor" href="contact.html">
+                            <p id="f-D">Contact Us</p>
+                        </a>
                     </div>
                     <div class="footer-divs">
                         <p id="f-hd">Similar Companies</p>
                         <p id="f-D"><a id="anchor" href="https://www.flipkart.com/"> FlipKart</a></p>
                         <p id="f-D"><a id="anchor" href="https://www.myntra.com/"> myntra</a></p>
                         <p id="f-D"><a id="anchor" href="https://www.Shopsy.in/"> Shopsy</a></p>
-                        
+
                     </div>
                     <div class="footer-divs">
                         <p id="f-hd">Help</p>

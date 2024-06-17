@@ -1,3 +1,10 @@
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -127,7 +134,6 @@
             width: 380px;
         }
     </style>
-
 </head>
 
 <body>
@@ -139,27 +145,29 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form id="signup-form">
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp">
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" 
+                                   pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
                             <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone
                                 else.</div> -->
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
+                            <input type="password" class="form-control" id="exampleInputPassword1" 
+                                   pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" required>
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
+                            <input type="password" class="form-control" id="exampleInputPassword2" required>
                         </div>
                         <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
                             <label class="form-check-label" for="exampleCheck1">Check me out</label>
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
+                        <p id="signup-error-msg"></p>
                     </form>
                 </div>
                 <div class="modal-footer">
@@ -170,7 +178,53 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        const form = document.getElementById('signup-form');
+        const emailInput = document.getElementById('exampleInputEmail1');
+        const passwordInput = document.getElementById('exampleInputPassword1');
+        const confirmPasswordInput = document.getElementById('exampleInputPassword2');
+        const checkboxInput = document.getElementById('exampleCheck1');
+        const errorMsgElement = document.getElementById('signup-error-msg');
+    
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+    
+            if (!emailInput.validity.valid) {
+                errorMsgElement.textContent = 'Invalid email address';
+                errorMsgElement.style.opacity = 1;
+                return;
+            }
+    
+            const password = passwordInput.value;
+            if (!meetsPasswordRequirements(password)) {
+                errorMsgElement.textContent = 'Password must be at least 8 characters, contain at least one uppercase letter, one lowercase letter, one number, and one special character';
+                errorMsgElement.style.opacity = 1;
+                return;
+            }
+    
+            if (passwordInput.value!== confirmPasswordInput.value) {
+                errorMsgElement.textContent = 'Passwords do not match';
+                errorMsgElement.style.opacity = 1;
+                return;
+            }
+    
+            if (!checkboxInput.checked) {
+                errorMsgElement.textContent = 'You must agree to the terms and conditions';
+                errorMsgElement.style.opacity = 1;
+                return;
+            }
+    
+            // If all validation passes, refresh the page
+            location.reload();
+        });
+    
+        function meetsPasswordRequirements(password) {
+            // Regular expression to check for at least one of each required character type
+            const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            return regex.test(password);
+        }
+    </script>
+
 </body>
 
 </html>
