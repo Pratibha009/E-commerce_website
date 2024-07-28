@@ -45,7 +45,10 @@
                 <!-- <div class="Bag"> -->
                     <!-- <i class="fa-solid fa-cart-shopping"></i>
                     <p>Cart</p> -->
-                    <a href="cartPage.html" id="cart-link"><i class="fas fa-shopping-cart"></i> Cart (0)</a>
+                    
+                            <a href="cart.html" id="cart-link"><i class="fas fa-shopping-cart"></i> Cart (<span id="cart-count">0</span>)</a>
+                        
+            
                 <!-- </div> -->
             </div>
 
@@ -58,6 +61,10 @@
             <div class="more">
                 <div class="options">
                     <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+                <div class="dropdown-content">
+                    <a href="review.html">Review</a>
+                    <a href="payment.html">Payment</a>
                 </div>
 
             </div>
@@ -73,9 +80,13 @@
                 <div class="images">
                     <img id="fashion" src="top.jpg" alt="fruits" height="250px" width="100%">
                     <p>Crop Top</p>
+                    <!-- <p id="description">Trendy and comfortable, perfect for casual days or nights out.</p> -->
                     <p>Price: <span class="price">₹400</span></p>
+                    <p id="description">Trendy and comfortable, perfect for casual days or nights out.</p>
                     <button class="Buy-Now">Buy Now </button>
-                    <button class="add-to-cart">Add to Cart</button>
+                    <!-- <button class="add-to-cart">Add to Cart</button> -->
+                    <!-- <button class="add-to-cart" data-product-id="1" data-product-name="Crop Top" data-product-price="400">Add to Cart</button> -->
+                    <button class="add-to-cart" data-product-id="1" data-product-name="Crop Top" data-product-price="400" data-product-image="top.jpg">Add to Cart</button>
                 </div>
 
             </div>
@@ -87,8 +98,11 @@
                 <img id="fashion" src="women'scargo.jpg" alt="vegetables" height="100%" width="100%">
                 <p>Women's High waist Baggy Jeans </p>
                 <p>Price: <span class="price">₹699</span></p>
+                <p id="description">Unwind in style with our cozy high-waisted baggy jeans.</p>
                 <button class="Buy-Now">Buy Now </button>
-                <button class="add-to-cart">Add to Cart</button>
+                <!-- <button class="add-to-cart">Add to Cart</button> -->
+                <!-- <button class="add-to-cart" data-product-id="2" data-product-name="Baggy Jeans" data-product-price="699">Add to Cart</button> -->
+                <button class="add-to-cart" data-product-id="2" data-product-name="Baggy Jeans" data-product-price="699" data-product-image="women'scargo.jpg">Add to Cart</button>
             </div>
         </div>
 
@@ -97,8 +111,11 @@
                 <img id="fashion" src="kurta-set.jpg" alt="butter" height="100%" width="100%">
                 <p>Kurta Set</p>
                 <p>Price: <span class="price">₹600</span></p>
+                <p id="description">Elegant and traditional, perfect for formal occasions or special events.</p>
                 <button class="Buy-Now">Buy Now </button>
-                <button class="add-to-cart">Add to Cart</button>
+                <!-- <button class="add-to-cart">Add to Cart</button> -->
+                <!-- <button class="add-to-cart" data-product-id="2" data-product-name="kurta set" data-product-price="600">Add to Cart</button> -->
+                <button class="add-to-cart" data-product-id="3" data-product-name="kurta set" data-product-price="600" data-product-image="kurta-set.jpg">Add to Cart</button>
             </div>
         </div>
 
@@ -107,8 +124,11 @@
                 <img id="fashion" src="kurta.avif" alt="coffee" height="100%" width="100%">
                 <p>Kurta</p>
                 <p>Price: <span class="price">₹499</span></p>
+                <p id="description">Stylish and comfortable, great for casual days or formal events.</p>
                 <button class="Buy-Now">Buy Now </button>
-                <button class="add-to-cart">Add to Cart</button>
+                <!-- <button class="add-to-cart">Add to Cart</button> -->
+                <!-- <button class="add-to-cart" data-product-id="2" data-product-name="kurta set" data-product-price="499">Add to Cart</button> -->
+                <button class="add-to-cart" data-product-id="4" data-product-name="Kurta" data-product-price="499" data-product-image="kurta.avif">Add to Cart</button>
             </div>
         </div>
 
@@ -118,8 +138,10 @@
                 <!-- <img src="https://source.unsplash.com/1200x400/?real juice, drink"> -->
                 <p>Kurta Pajama</p>
                 <p>Price: <span class="price">₹1149</span></p>
+                <p id="description">Elegant and traditional, perfect for formal occasions or special events.</p>
                 <button class="Buy-Now">Buy Now </button>
-                <button class="add-to-cart">Add to Cart</button>
+                <!-- <button class="add-to-cart">Add to Cart</button> -->
+                <button class="add-to-cart" data-product-id="5" data-product-name="kurta Pajama" data-product-price="1140">Add to Cart</button>
             </div>
         </div>
 
@@ -129,8 +151,11 @@
                 <!-- <img src="https://source.unsplash.com/1200x400/?milk"> -->
                 <p>T-Shirt</p>
                 <p>Price: <span class="price">₹349</span></p>
+                <p id="description">Comfortable and casual, great for everyday wear.</p>
                 <button class="Buy-Now">Buy Now </button>
-                <button class="add-to-cart">Add to Cart</button>
+                <!-- <button class="add-to-cart">Add to Cart</button> -->
+                <button class="add-to-cart" data-product-id="6" data-product-name="T-Shirt" data-product-price="349" data-product-image="kurta.avif">Add to Cart</button>
+
             </div>
         </div>
 
@@ -140,48 +165,57 @@
                 <!-- <img src="https://source.unsplash.com/1200x400/?jam"> -->
                 <p>Men's Cargo Pants</p>
                 <p>Price: <span class="price">₹899</span></p>
+                <p id="description">Practical and comfortable, perfect for outdoor activities or everyday wear.</p>
                 <button class="Buy-Now">Buy Now </button>
-                <button class="add-to-cart">Add to Cart</button>
+                <!-- <button class="add-to-cart">Add to Cart</button> -->
+                <button class="add-to-cart" data-product-id="7" data-product-name="Men's Cargo Pants" data-product-price="899" data-product-image="kurta.avif">Add to Cart</button>
+
             </div>
         </div>
 
         <div class="beauty-toys-more">
             <div class="images">
-                <img id="fashion" src="formal-shirt.jpeg" alt="Bread" height="100%" width="100%">
+                <img id="fashion" src="formal-shirt.jpeg" alt="Bread" height="200%" width="100%">
                 <!-- <img src="https://source.unsplash.com/1200x400/?bread" height="200px" width="100%"> -->
                 <p>Formal Men's Shirt</p>
                 <p>Price: <span class="price">₹500</span></p>
+                <p id="description">Elegant and sophisticated, perfect for formal occasions or special events.</p>
                 <button class="Buy-Now">Buy Now </button>
-                <button class="add-to-cart">Add to Cart</button>
+                <!-- <button class="add-to-cart">Add to Cart</button> -->
+                <button class="add-to-cart" data-product-id="8" data-product-name="Formal Men's Shirt" data-product-price="500" data-product-image="kurta.avif">Add to Cart</button>
+
             </div>
         </div>
 
         <div class="two-wheelers">
             <div class="images">
-                <img src="Gown.jpg" alt="ghee" height="200%" width="100%">
+                <img id="fashion" src="Gown.jpg" alt="ghee" height="200%" width="100%">
                 <p>Gown</p>
                 <p>Price: <span class="price">₹1489</span></p>
+                <p id="description">Dazzle the night away in our show-stopping gown, designed to make you feel like royalty.</p>
                 <button class="Buy-Now">Buy Now </button>
-                <button class="add-to-cart">Add to Cart</button>
+                <!-- <button class="add-to-cart">Add to Cart</button> -->
+                <button class="add-to-cart" data-product-id="9" data-product-name="Gown" data-product-price="1489" data-product-image="kurta.avif">Add to Cart</button>
                 
 
             </div>
         </div>
     </div>
-
+    
+    <script src="script.js"></script>
     <footer>
         <div class="f-end-n">
             <div>
                 <a id="anchor" href="about.html"><p id="f-D"> About Us</p></a>
             </div>
             <div>
-                <pre><p id="f-D"> <i id="icons" class="fa-solid fa-gift"></i>  Gift Card</p></pre>
+                <a id="anchor" href="review.html"><p id="f-D"> Reviews</p></a>
             </div>
             <div>
-                <pre><p id="f-D"> <i id="icons" class="fa-regular fa-circle-question"></i>  Help center</p></pre>
+                <a id="anchor" href="https://youtu.be/9wPJs4Mw0hQ"><p id="f-D">Short video</p></a>
             </div>
             <div>
-                <p id="f-D"> 2024 Arrows.in</p>
+                <p id="f-D"> 2024 Stylike.in</p>
             </div>
             
         </div>

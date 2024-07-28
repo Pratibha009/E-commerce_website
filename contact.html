@@ -55,6 +55,26 @@
     outline: none;
   }
   
+  .search-box::placeholder {
+    color: #9b9a89;
+  }
+  
+  button[type="submitt"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #8c9055;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  button[type="submitt"]:hover {
+    background-color: #444;
+  }
+  
   
   
   
@@ -171,6 +191,9 @@
     }
   }
 
+  .Info{
+    padding: 40px;
+  }
 
 
 
@@ -222,7 +245,7 @@ footer a:hover {
             <div class="search">
                 <div class="search-container">
                     <form class="d-flex" role="search">
-                        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <button type="submitt"><i class="fa-solid fa-magnifying-glass"></i></button>
                         <input type="text" class="search-box" placeholder="search for products, Brands and more">
                     </form>
                 </div>
@@ -284,7 +307,7 @@ footer a:hover {
                 <br>
                 write your concern below:
                 <div>
-                    <textarea id="textbox" rows="10" cols="50"></textarea>
+                    <textarea id="textbox" rows="20" cols="70"></textarea>
                 </div>
                 <div>
                    <button type="submit" value="submit">Submit</button>

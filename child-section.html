@@ -45,7 +45,7 @@
                 <!-- <div class="Bag"> -->
                     <!-- <i class="fa-solid fa-cart-shopping"></i>
                     <p>Cart</p> -->
-                    <a href="cartPage.html" id="cart-link"><i class="fas fa-shopping-cart"></i> Cart (0)</a>
+                    <a href="cart.html" id="cart-link"><i class="fas fa-shopping-cart"></i> Cart (<span id="cart-count">0</span>)</a>
                 <!-- </div> -->
             </div>
 
@@ -58,6 +58,10 @@
             <div class="more">
                 <div class="options">
                     <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+                <div class="dropdown-content">
+                    <a href="review.html">Review</a>
+                    <a href="payment.html">Payment</a>
                 </div>
 
             </div>
@@ -74,8 +78,11 @@
                     <img src="reversible-octopus-plush.jpg" alt="reversible-octopus-plush" height="250px" width="100%">
                     <p>Reversible Octopus Plush</p>
                     <p>Price: <span class="price">₹120</span></p>
+                    <p id="description">Cuddle up with this adorable reversible octopus plush, perfect for both play and snuggling.</p>
                     <button class="Buy-Now">Buy Now </button>
-                    <button class="add-to-cart">Add to Cart</button>
+                    <!-- <button class="add-to-cart">Add to Cart</button> -->
+                      <button class="add-to-cart" data-product-id="1" data-product-name="Reversible Octopus Plush" data-product-price="120" data-product-image="reversible-octopus-plush.jpg">Add to Cart</button>
+
                 </div>
 
             </div>
@@ -87,8 +94,11 @@
                 <img  src="abacus-wooden-toy.jpeg" alt="abacus-wooden-toy" height="100%" width="100%">
                 <p>Abacus Wooden Toy </p>
                 <p>Price: <span class="price">₹1,124</span></p>
+                <p id="description">Develop your child's math skills with this classic wooden abacus toy, made with high-quality materials.</p>
                 <button class="Buy-Now">Buy Now </button>
-                <button class="add-to-cart">Add to Cart</button>
+                <!-- <button class="add-to-cart">Add to Cart</button> -->
+                  <button class="add-to-cart" data-product-id="2" data-product-name="Abacus Wooden Toy" data-product-price="1124" data-product-image="abacus-wooden-toy.jpeg">Add to Cart</button>
+
             </div>
         </div>
 
@@ -97,8 +107,11 @@
                 <img  src="oil-paint-palette.jpg" alt="Acrylic Paint" height="100%" width="100%">
                 <p>Acrylic Paint</p>
                 <p>Price: <span class="price">₹999</span></p>
+                <p id="description">Unleash your creativity with this vibrant acrylic paint set, perfect for artists of all levels.</p>
                 <button class="Buy-Now">Buy Now </button>
-                <button class="add-to-cart">Add to Cart</button>
+                <!-- <button class="add-to-cart">Add to Cart</button> -->
+                <button class="add-to-cart" data-product-id="3" data-product-name="Acrylic Paint" data-product-price="999" data-product-image="oil-paint-palette.jpg">Add to Cart</button>
+
             </div>
         </div>
 
@@ -107,8 +120,11 @@
                 <img  src="teddy.jpg" alt="Teddy" height="100%" width="100%">
                 <p>Teddy Bear</p>
                 <p>Price: <span class="price">₹399</span></p>
+                <p id="description">Snuggle up with this soft and cuddly teddy bear, perfect for kids and adults alike.</p>
                 <button class="Buy-Now">Buy Now </button>
-                <button class="add-to-cart">Add to Cart</button>
+                <!-- <button class="add-to-cart">Add to Cart</button> -->
+                  <button class="add-to-cart" data-product-id="4" data-product-name="Teddy Bear" data-product-price="399" data-product-image="teddy.jpg">Add to Cart</button>
+
             </div>
         </div>
 
@@ -117,8 +133,11 @@
                 <img src="remote-control-car.jpg" alt="remote-control-car" height="100%" width="100%">
                 <p>Remote Control Car</p>
                 <p>Price: <span class="price">₹799</span></p>
+                <p id="description">Race into fun with this high-speed remote control car, perfect for kids and adults alike.</p>
                 <button class="Buy-Now">Buy Now </button>
-                <button class="add-to-cart">Add to Cart</button>
+                <!-- <button class="add-to-cart">Add to Cart</button> -->
+                  <button class="add-to-cart" data-product-id="5" data-product-name="Remote Control Car" data-product-price="799" data-product-image="remote-control-car.jpg">Add to Cart</button>
+
             </div>
         </div>
 
@@ -127,8 +146,11 @@
                 <img src="Wooden-alphabet-puzzle-toy.jpg" alt="Wooden-alphabet-puzzle-toy" height="100%" width="100%">
                 <p>Wooden Alphabet Puzzle Toy</p>
                 <p>Price: <span class="price">₹750</span></p>
+                <p id="description">Help your child learn the alphabet with this interactive wooden puzzle toy, made with high-quality materials.</p>
                 <button class="Buy-Now">Buy Now </button>
-                <button class="add-to-cart">Add to Cart</button>
+                <!-- <button class="add-to-cart">Add to Cart</button> -->
+                  <button class="add-to-cart" data-product-id="6" data-product-name="Alphabet Puzzle Toy" data-product-price="750" data-product-image="Wooden-alphabet-puzzle-toy.jpg">Add to Cart</button>
+
             </div>
         </div>
 
@@ -137,18 +159,24 @@
                 <img  src="diary.jpeg" alt="diary" height ="100%" width="100%">
                 <p>Diary</p>
                 <p>Price: <span class="price">₹200</span></p>
+                <p id="description">Express yourself with this beautifully designed diary, perfect for writing, drawing, and more.</p>
                 <button class="Buy-Now">Buy Now </button>
-                <button class="add-to-cart">Add to Cart</button>
+                <!-- <button class="add-to-cart">Add to Cart</button> -->
+                  <button class="add-to-cart" data-product-id="7" data-product-name="Diary" data-product-price="200" data-product-image="diary.jpeg">Add to Cart</button>
+
             </div>
         </div>
 
         <div class="beauty-toys-more">
             <div class="images">
                 <img src="highlighter.jpg" alt="highlighter" height="100%" width="100%">
-                <p>Highlight</p>
+                <p>Highlighter</p>
                 <p>Price: <span class="price">₹49</span></p>
+                <p id="description">Brighten up your notes and documents with this vibrant highlighter, perfect for students and professionals.</p>
                 <button class="Buy-Now">Buy Now </button>
-                <button class="add-to-cart">Add to Cart</button>
+                <!-- <button class="add-to-cart">Add to Cart</button> -->
+                  <button class="add-to-cart" data-product-id="8" data-product-name="Highlighter" data-product-price="49" data-product-image="highlighter.jpg">Add to Cart</button>
+
             </div>
         </div>
 
@@ -157,21 +185,25 @@
                 <img src="pen.jpg" alt="pen" height="200%" width="100%">
                 <p>Fountain Pen</p>
                 <p>Price: <span class="price">₹99</span></p>
+                <p id="description">Write with style and elegance with this premium fountain pen, perfect for everyday use.</p>
                 <button class="Buy-Now">Buy Now </button>
-                <button class="add-to-cart">Add to Cart</button>
+                <!-- <button class="add-to-cart">Add to Cart</button> -->
+                  <button class="add-to-cart" data-product-id="9" data-product-name="Fountain Pen" data-product-price="99" data-product-image="pen.jpg">Add to Cart</button>
+
                 
 
             </div>
         </div>
     </div>
 
+    <script src="script.js"></script>
     <footer>
         <div class="f-end-n">
             <div>
                 <a id="anchor" href="about.html"><p id="f-D"> About Us</p></a>
             </div>
             <div>
-                <pre><p id="f-D"> <i id="icons" class="fa-solid fa-gift"></i>  Gift Card</p></pre>
+                <a id="anchor" href="review.html"><p id="f-D"> Reviews</p></a>
             </div>
             <div>
                 <pre><p id="f-D"> <i id="icons" class="fa-regular fa-circle-question"></i>  Help center</p></pre>

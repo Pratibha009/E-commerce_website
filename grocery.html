@@ -45,7 +45,7 @@
                 <!-- <div class="Bag"> -->
                     <!-- <i class="fa-solid fa-cart-shopping"></i>
                     <p>Cart</p> -->
-                    <a href="cartPage.html" id="cart-link"><i class="fas fa-shopping-cart"></i> Cart (0)</a>
+                    <a href="cart.html" id="cart-link"><i class="fas fa-shopping-cart"></i> Cart (<span id="cart-count">0</span>)</a>
                 <!-- </div> -->
             </div>
 
@@ -59,9 +59,12 @@
                 <div class="options">
                     <i class="fa-solid fa-ellipsis-vertical"></i>
                 </div>
+                <div class="dropdown-content">
+                    <a href="review.html">Review</a>
+                    <a href="payment.html">Payment</a>
+                </div>
 
             </div>
-
         </div>
        
     </header>
@@ -73,9 +76,12 @@
                 <div class="images">
                     <img src="fruits.jpeg" alt="fruits" height="100%" width="100%">
                     <p>Fruits</p>
-                    <p>Price: <span class="price">$6.99</span></p>
-                    <button class="Buy-Now">Buy Now </button>
-                    <button class="add-to-cart">Add to Cart</button>
+                    <p>Price: Starts from<span class="price"> ₹100</span></p>
+                    <p id="description">Fresh and juicy fruits for a healthy snack.</p>
+                    <button class="Buy-Now"><a id="anchor" href="payment.html"> Buy Now </a></button>
+                    <!-- <button class="add-to-cart">Add to Cart</button> -->
+                <button class="add-to-cart" data-product-id="1" data-product-name="Fruits" data-product-price="100" data-product-image="fruits.jpeg">Add to Cart</button>
+
                 </div>
 
             </div>
@@ -86,9 +92,12 @@
             <div class="images">
                 <img src="vegetables.jpg" alt="vegetables" height="100%" width="100%">
                 <p>Vegetables</p>
-                <p>Price: <span class="price">$6.99</span></p>
-                <button class="Buy-Now">Buy Now </button>
-                <button class="add-to-cart">Add to Cart</button>
+                <p>Price: Starts from<span class="price"> ₹50</span></p>
+                <p id="description">Fresh and crunchy vegetables for a healthy meal.</p>
+                <button class="Buy-Now"><a id="anchor" href="payment.html"> Buy Now</a> </button>
+                <!-- <button class="add-to-cart">Add to Cart</button> -->
+                <button class="add-to-cart" data-product-id="2" data-product-name="vegetables" data-product-price="50" data-product-image="vegetables.jpg">Add to Cart</button>
+
             </div>
         </div>
 
@@ -96,9 +105,12 @@
             <div class="images">
                 <img src="butter.jpeg" alt="butter" height="100%" width="100%">
                 <p>Butter</p>
-                <p>Price: <span class="price">$6.99</span></p>
-                <button class="Buy-Now">Buy Now </button>
-                <button class="add-to-cart">Add to Cart</button>
+                <p>Price: <span class="price">₹200</span></p>
+                <p id="description">Rich and creamy butter for cooking and baking.</p>
+                <button class="Buy-Now"><a id="anchor" href="payment.html"> Buy Now </a> </button>
+                <!-- <button class="add-to-cart">Add to Cart</button> -->
+                <button class="add-to-cart" data-product-id="3" data-product-name="Butter" data-product-price="200" data-product-image="butter.jpeg">Add to Cart</button>
+
             </div>
         </div>
 
@@ -106,20 +118,26 @@
             <div class="images">
                 <img src="coffee.webp" alt="coffee" height="100%" width="100%">
                 <p>Coffee</p>
-                <p>Price: <span class="price">$6.99</span></p>
+                <p>Price: <span class="price">₹418</span></p>
+                <p id="description">Rich and aromatic coffee for a morning boost.</p>
                 <button class="Buy-Now">Buy Now </button>
-                <button class="add-to-cart">Add to Cart</button>
+                <!-- <button class="add-to-cart">Add to Cart</button> -->
+                <button class="add-to-cart" data-product-id="4" data-product-name="coffee" data-product-price="418" data-product-image="coffee.webp">Add to Cart</button>
+
             </div>
         </div>
 
         <div class="home-Furniture">
             <div class="images">
                 <img src="juice.jpeg" alt="juice" height="100%" width="100%">
-                <!-- <img src="https://source.unsplash.com/1200x400/?real juice, drink"> -->
+                <img src="https://source.unsplash.com/1200x400/?real juice, drink">
                 <p>Fruit Juice</p>
-                <p>Price: <span class="price">$6.99</span></p>
+                <p>Price: <span class="price">₹140</span></p>
+                <p id="description">Fresh and refreshing fruit juice for a healthy drink.</p>
                 <button class="Buy-Now">Buy Now </button>
-                <button class="add-to-cart">Add to Cart</button>
+                <!-- <button class="add-to-cart">Add to Cart</button> -->
+                <button class="add-to-cart" data-product-id="5" data-product-name="Juice" data-product-price="140" data-product-image="juice.jpeg">Add to Cart</button>
+
             </div>
         </div>
 
@@ -128,9 +146,12 @@
                 <img src="milk.jpg" alt="milk" height="100%" width="100%">
                 <!-- <img src="https://source.unsplash.com/1200x400/?milk"> -->
                 <p>milk</p>
-                <p>Price: <span class="price">$6.99</span></p>
+                <p>Price: <span class="price">₹60</span></p>
+                <p id="description">Fresh and nutritious milk for a healthy diet.</p>
                 <button class="Buy-Now">Buy Now </button>
-                <button class="add-to-cart">Add to Cart</button>
+                <!-- <button class="add-to-cart">Add to Cart</button> -->
+                <button class="add-to-cart" data-product-id="6" data-product-name="Milk" data-product-price="60" data-product-image="milk.jpg">Add to Cart</button>
+
             </div>
         </div>
 
@@ -139,9 +160,12 @@
                 <img src="jam.jpeg" alt="jam" height="100%" width="100%">
                 <!-- <img src="https://source.unsplash.com/1200x400/?jam"> -->
                 <p>Jam</p>
-                <p>Price: <span class="price">$6.99</span></p>
+                <p>Price: <span class="price">₹99</span></p>
+                <p id="description">Sweet and tangy jam for a delicious breakfast.</p>
                 <button class="Buy-Now">Buy Now </button>
-                <button class="add-to-cart">Add to Cart</button>
+                <!-- <button class="add-to-cart">Add to Cart</button> -->
+                <button class="add-to-cart" data-product-id="7" data-product-name="Jam" data-product-price="99" data-product-image="jam.jpeg">Add to Cart</button>
+
             </div>
         </div>
 
@@ -150,38 +174,46 @@
                 <img src="bread.jpeg" alt="Bread" height="100%" width="100%">
                 <!-- <img src="https://source.unsplash.com/1200x400/?bread" height="200px" width="100%"> -->
                 <p>Bread</p>
-                <p>Price: <span class="price">$6.99</span></p>
+                <p>Price: <span class="price">₹45</span></p>
+                <p id="description">Fresh and soft bread for a delicious sandwich.</p>
                 <button class="Buy-Now">Buy Now </button>
-                <button class="add-to-cart">Add to Cart</button>
+                <!-- <button class="add-to-cart">Add to Cart</button> -->
+                <button class="add-to-cart" data-product-id="8" data-product-name="Bread" data-product-price="45" data-product-image="bread.jpeg">Add to Cart</button>
+
             </div>
         </div>
+        
 
         <div class="two-wheelers">
             <div class="images">
                 <img src="ghee.jpeg" alt="ghee" height="200%" width="100%">
                 <p>Clarified Butter</p>
-                <p>Price: <span class="price">$6.99</span></p>
+                <p>Price: <span class="price">₹699</span></p>
+                <p id="description">Pure and healthy clarified butter for cooking.</p>
                 <button class="Buy-Now">Buy Now </button>
-                <button class="add-to-cart">Add to Cart</button>
+                <!-- <button class="add-to-cart">Add to Cart</button> -->
+                <button class="add-to-cart" data-product-id="9" data-product-name="Clarified Butter" data-product-price="699" data-product-image="ghee.jpeg">Add to Cart</button>
+
                 
 
             </div>
         </div>
     </div>
 
+    <script src="script.js"></script>
     <footer>
         <div class="f-end-n">
             <div>
                 <a id="anchor" href="about.html"><p id="f-D"> About Us</p></a>
             </div>
             <div>
-                <pre><p id="f-D"> <i id="icons" class="fa-solid fa-gift"></i>  Gift Card</p></pre>
+                <a id="anchor" href="review.html"><p id="f-D"> Reviews</p></a>
             </div>
             <div>
-                <pre><p id="f-D"> <i id="icons" class="fa-regular fa-circle-question"></i>  Help center</p></pre>
+                <a id="anchor" href="https://www.youtube.com/watch?v=8DsDH3JQ384&list=PPSV"><p id="f-D">Short video</p></a>
             </div>
             <div>
-                <p id="f-D"> 2024 Arrows.in</p>
+                <p id="f-D"> 2024 Stylike.in</p>
             </div>
             
         </div>

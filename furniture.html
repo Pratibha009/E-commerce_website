@@ -45,7 +45,7 @@
                 <!-- <div class="Bag"> -->
                     <!-- <i class="fa-solid fa-cart-shopping"></i>
                     <p>Cart</p> -->
-                    <a href="cartPage.html" id="cart-link"><i class="fas fa-shopping-cart"></i> Cart (0)</a>
+                    <a href="cart.html" id="cart-link"><i class="fas fa-shopping-cart"></i> Cart(<span id="cart-count">0</span>)</a>
                 <!-- </div> -->
             </div>
 
@@ -58,6 +58,10 @@
             <div class="more">
                 <div class="options">
                     <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+                <div class="dropdown-content">
+                    <a href="review.html">Review</a>
+                    <a href="payment.html">Payment</a>
                 </div>
 
             </div>
@@ -73,9 +77,12 @@
                 <div class="images">
                     <img src="Dining-Table.jpg" alt="fruits" height="250px" width="100%">
                     <p>Dining Table</p>
-                    <p>Price: <span class="price">₹35493</span></p>
+                    <p>Price: <span class="price">₹35,493</span></p>
+                    <p id="description">Elegant and spacious dining table perfect for family gatherings.</p>
                     <button class="Buy-Now">Buy Now </button>
-                    <button class="add-to-cart">Add to Cart</button>
+                    <!-- <button class="add-to-cart">Add to Cart</button> -->
+                    <button class="add-to-cart" data-product-id="1" data-product-name="Dining Table" data-product-price="35493" data-product-image="Dining-Table.jpg">Add to Cart</button>
+
                 </div>
 
             </div>
@@ -87,8 +94,11 @@
                 <img  src="sofaa.webp" alt="vegetables" height="100%" width="100%">
                 <p>Sofa Set </p>
                 <p>Price: <span class="price">₹18,675</span></p>
+                <p id="description">Comfortable and stylish sofa set for your living room.</p>
                 <button class="Buy-Now">Buy Now </button>
-                <button class="add-to-cart">Add to Cart</button>
+                <!-- <button class="add-to-cart">Add to Cart</button> -->
+                <button class="add-to-cart" data-product-id="2" data-product-name="Sofa Set" data-product-price="18675" data-product-image="sofaa.webp">Add to Cart</button>
+
             </div>
         </div>
 
@@ -97,8 +107,11 @@
                 <img  src="Bed.webp" alt="butter" height="100%" width="100%">
                 <p>Bed</p>
                 <p>Price: <span class="price">₹30,660</span></p>
+                <p id="description">Stylish and comfortable bed for a good night's sleep.</p>
                 <button class="Buy-Now">Buy Now </button>
-                <button class="add-to-cart">Add to Cart</button>
+                <!-- <button class="add-to-cart">Add to Cart</button> -->
+                <button class="add-to-cart" data-product-id="3" data-product-name="Bed" data-product-price="30660" data-product-image="Bed.webp">Add to Cart</button>
+
             </div>
         </div>
 
@@ -107,8 +120,11 @@
                 <img  src="office-chair.jpg" alt="coffee" height="100%" width="100%">
                 <p>Office Chair</p>
                 <p>Price: <span class="price">₹6,690</span></p>
+                <p id="description">Ergonomic and comfortable office chair for long working hours.</p>
                 <button class="Buy-Now">Buy Now </button>
-                <button class="add-to-cart">Add to Cart</button>
+                <!-- <button class="add-to-cart">Add to Cart</button> -->
+                <button class="add-to-cart" data-product-id="4" data-product-name="Office Chair" data-product-price="6690" data-product-image="office-chair.jpg">Add to Cart</button>
+
             </div>
         </div>
 
@@ -117,8 +133,11 @@
                 <img src="Cabinet.webp" alt="juice" height="100%" width="100%">
                 <p>Mobile Filing Cabinet</p>
                 <p>Price: <span class="price">₹4,450</span></p>
+                <p id="description">Spacious and mobile filing cabinet for your office needs.</p>
                 <button class="Buy-Now">Buy Now </button>
-                <button class="add-to-cart">Add to Cart</button>
+                <!-- <button class="add-to-cart">Add to Cart</button> -->
+                <button class="add-to-cart" data-product-id="5" data-product-name="Mobile Filing Cabinet" data-product-price="4450" data-product-image="Cabinet.webp">Add to Cart</button>
+
             </div>
         </div>
 
@@ -127,8 +146,11 @@
                 <img src="study-table.webp" alt="milk" height="100%" width="100%">
                 <p>Study Table</p>
                 <p>Price: <span class="price">₹11,470</span></p>
+                <p id="description">Compact and comfortable study table for students.</p>
                 <button class="Buy-Now">Buy Now </button>
-                <button class="add-to-cart">Add to Cart</button>
+                <!-- <button class="add-to-cart">Add to Cart</button> -->
+                <button class="add-to-cart" data-product-id="6" data-product-name="Study Table" data-product-price="11470" data-product-image="study-table.webp">Add to Cart</button>
+
             </div>
         </div>
 
@@ -137,8 +159,11 @@
                 <img  src="bookshelf.jpeg" alt="jam" height ="100%" width="100%">
                 <p>Bookshelf</p>
                 <p>Price: <span class="price">₹6,032</span></p>
+                <p id="description">Spacious and stylish bookshelf for your home library.</p>
                 <button class="Buy-Now">Buy Now </button>
-                <button class="add-to-cart">Add to Cart</button>
+                <!-- <button class="add-to-cart">Add to Cart</button> -->
+                <button class="add-to-cart" data-product-id="7" data-product-name="Bookshelf" data-product-price="6032" data-product-image="bookshelf.jpeg">Add to Cart</button>
+
             </div>
         </div>
 
@@ -147,8 +172,11 @@
                 <img src="table.webp" alt="Bread" height="100%" width="100%">
                 <p>Coffee Table</p>
                 <p>Price: <span class="price">₹4,700</span></p>
+                <p id="description">Elegant and functional coffee table for your living room.</p>
                 <button class="Buy-Now">Buy Now </button>
-                <button class="add-to-cart">Add to Cart</button>
+                <!-- <button class="add-to-cart">Add to Cart</button> -->
+                <button class="add-to-cart" data-product-id="8" data-product-name="Coffee Table" data-product-price="4700" data-product-image="table.webp">Add to Cart</button>
+
             </div>
         </div>
 
@@ -157,27 +185,31 @@
                 <img src="wardrobe.webp" alt="ghee" height="200%" width="100%">
                 <p>Wardrobe</p>
                 <p>Price: <span class="price">₹19,850</span></p>
+                <p id="description">Spacious and stylish wardrobe for your bedroom.</p>
                 <button class="Buy-Now">Buy Now </button>
-                <button class="add-to-cart">Add to Cart</button>
+                <!-- <button class="add-to-cart">Add to Cart</button> -->
+                <button class="add-to-cart" data-product-id="9" data-product-name="Wardrobe" data-product-price="19850" data-product-image="wardrobe.webp">Add to Cart</button>
+
                 
 
             </div>
         </div>
     </div>
 
+    <script src="script.js"></script>
     <footer>
         <div class="f-end-n">
             <div>
                 <a id="anchor" href="about.html"><p id="f-D">About Us</p></a>
             </div>
             <div>
-                <pre><p id="f-D"> <i id="icons" class="fa-solid fa-gift"></i>  Gift Card</p></pre>
+                <a id="anchor" href="review.html"><p id="f-D"> Reviews</p></a>
             </div>
             <div>
-                <pre><p id="f-D"> <i id="icons" class="fa-regular fa-circle-question"></i>  Help center</p></pre>
+                <a id="anchor" href="https://youtu.be/S-A0qLTxf-U?si=roktweZWS2JKtNaH"><p id="f-D"> short video</p></a>
             </div>
             <div>
-                <p id="f-D"> 2024 Arrows.in</p>
+                <p id="f-D"> 2024 Stylike.in</p>
             </div>
             
         </div>

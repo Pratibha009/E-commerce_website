@@ -45,7 +45,7 @@
                 <!-- <div class="Bag"> -->
                     <!-- <i class="fa-solid fa-cart-shopping"></i>
                     <p>Cart</p> -->
-                    <a href="cartPage.html" id="cart-link"><i class="fas fa-shopping-cart"></i> Cart (0)</a>
+                    <a href="cart.html" id="cart-link"><i class="fas fa-shopping-cart"></i> Cart (<span id="cart-count">0</span>)</a>
                 <!-- </div> -->
             </div>
 
@@ -58,6 +58,10 @@
             <div class="more">
                 <div class="options">
                     <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+                <div class="dropdown-content">
+                    <a href="review.html">Review</a>
+                    <a href="payment.html">Payment</a>
                 </div>
 
             </div>
@@ -74,8 +78,11 @@
                     <img src="cc-cream.webp" alt="fruits" height="250px" width="100%">
                     <p>CC Cream</p>
                     <p>Price: <span class="price">₹710</span></p>
+                    <p id="description">A lightweight, multi-benefit cream that provides coverage, hydration, and sun protection.</p>
                     <button class="Buy-Now">Buy Now </button>
-                    <button class="add-to-cart">Add to Cart</button>
+                    <!-- <button class="add-to-cart">Add to Cart</button> -->
+                <button class="add-to-cart" data-product-id="1" data-product-name="CC Cream" data-product-price="710" data-product-image="cc-cream.webp">Add to Cart</button>
+
                 </div>
 
             </div>
@@ -87,8 +94,11 @@
                 <img  src="serum.jpg" alt="serum" height="100%" width="100%">
                 <p>Hyaluronic Acid Serum </p>
                 <p>Price: <span class="price">₹978</span></p>
+                <p id="description">A lightweight, fast-absorbing serum that hydrates and plumps the skin, reducing the appearance of fine lines and wrinkles.</p>
                 <button class="Buy-Now">Buy Now </button>
-                <button class="add-to-cart">Add to Cart</button>
+                <!-- <button class="add-to-cart">Add to Cart</button> -->
+                <button class="add-to-cart" data-product-id="2" data-product-name="Hyaluronic Acid Serum" data-product-price="978" data-product-image="serum.jpg">Add to Cart</button>
+
             </div>
         </div>
 
@@ -97,8 +107,11 @@
                 <img  src="concealer.jpg" alt="concealer" height="100%" width="100%">
                 <p>Concealer</p>
                 <p>Price: <span class="price">₹2,422</span></p>
+                <p id="description">A full-coverage concealer that provides long-lasting, flawless coverage for imperfections.</p>
                 <button class="Buy-Now">Buy Now </button>
-                <button class="add-to-cart">Add to Cart</button>
+                <!-- <button class="add-to-cart">Add to Cart</button> -->
+                <button class="add-to-cart" data-product-id="3" data-product-name="Concealer" data-product-price="2422" data-product-image="concealer.jpg">Add to Cart</button>
+
             </div>
         </div>
 
@@ -107,8 +120,11 @@
                 <img  src="compact-powder.avif" alt="compact-powder" height="100%" width="100%">
                 <p>Compact Powder</p>
                 <p>Price: <span class="price">₹571</span></p>
+                <p id="description">A lightweight, oil-absorbing compact powder that sets makeup and controls shine.</p>
                 <button class="Buy-Now">Buy Now </button>
-                <button class="add-to-cart">Add to Cart</button>
+                <!-- <button class="add-to-cart">Add to Cart</button> -->
+                <button class="add-to-cart" data-product-id="4" data-product-name="Compact Powder" data-product-price="571" data-product-image="compact-powder.avif">Add to Cart</button>
+
             </div>
         </div>
 
@@ -117,8 +133,11 @@
                 <img src="blush.jpg" alt="blush" height="100%" width="100%">
                 <p>Maybelline Blush and Highlight Kit</p>
                 <p>Price: <span class="price">₹799</span></p>
+                <p id="description">A blush and highlight kit that adds a natural-looking flush of color to the cheeks.</p>
                 <button class="Buy-Now">Buy Now </button>
-                <button class="add-to-cart">Add to Cart</button>
+                <!-- <button class="add-to-cart">Add to Cart</button> -->
+                <button class="add-to-cart" data-product-id="5" data-product-name="Maybelline Blush and Highlight Kit" data-product-price="799" data-product-image="blush.jpg">Add to Cart</button>
+
             </div>
         </div>
 
@@ -127,8 +146,11 @@
                 <img src="eyeliner.avif" alt="eyeliner" height="100%" width="100%">
                 <p>Eyeliner</p>
                 <p>Price: <span class="price">₹750</span></p>
+                <p id="description">A waterproof eyeliner that creates a precise, dramatic line.</p>
                 <button class="Buy-Now">Buy Now </button>
-                <button class="add-to-cart">Add to Cart</button>
+                <!-- <button class="add-to-cart">Add to Cart</button> -->
+                <button class="add-to-cart" data-product-id="6" data-product-name="A waterproof eyeliner that creates a precise, dramatic line." data-product-price="750" data-product-image="eyeliner.avif">Add to Cart</button>
+
             </div>
         </div>
 
@@ -137,8 +159,11 @@
                 <img  src="makeup-brushh.jpg" alt="makeup-brush" height ="100%" width="100%">
                 <p>Makeup Brush Set</p>
                 <p>Price: <span class="price">₹499</span></p>
+                <p id="description">A set of high-quality makeup brushes for precise application and blending.</p>
                 <button class="Buy-Now">Buy Now </button>
-                <button class="add-to-cart">Add to Cart</button>
+                <!-- <button class="add-to-cart">Add to Cart</button> -->
+                <button class="add-to-cart" data-product-id="7" data-product-name="Makeup Brush Set" data-product-price="499" data-product-image="makeup-brushh.jpg">Add to Cart</button>
+
             </div>
         </div>
 
@@ -147,8 +172,11 @@
                 <img src="perfume.jpg" alt="perfume" height="100%" width="100%">
                 <p>Perfume</p>
                 <p>Price: <span class="price">₹4,700</span></p>
+                <p id="description">A long-lasting, fragrant perfume for everyday wear.</p>
                 <button class="Buy-Now">Buy Now </button>
-                <button class="add-to-cart">Add to Cart</button>
+                <!-- <button class="add-to-cart">Add to Cart</button> -->
+                <button class="add-to-cart" data-product-id="8" data-product-name="Perfume" data-product-price="4450" data-product-image="perfume.jpg">Add to Cart</button>
+
             </div>
         </div>
 
@@ -157,27 +185,31 @@
                 <img src="lipshade.jpg" alt="lipshade" height="200%" width="100%">
                 <p>Nude Lipstick</p>
                 <p>Price: <span class="price">₹455</span></p>
+                <p id="description">A moisturizing, nude-colored lipstick for everyday wear.</p>
                 <button class="Buy-Now">Buy Now </button>
-                <button class="add-to-cart">Add to Cart</button>
+                <!-- <button class="add-to-cart">Add to Cart</button> -->
+                <button class="add-to-cart" data-product-id="9" data-product-name="Nude Lipstick" data-product-price="455" data-product-image="lipshade.jpg">Add to Cart</button>
+
                 
 
             </div>
         </div>
     </div>
 
+    <script src="script.js"></script>
     <footer>
         <div class="f-end-n">
             <div>
                 <a id="anchor" href="about.html"><p id="f-D"> About Us</p></a>
             </div>
             <div>
-                <pre><p id="f-D"> <i id="icons" class="fa-solid fa-gift"></i>  Gift Card</p></pre>
+                <a id="anchor" href="review.html"><p id="f-D"> Reviews</p></a>
             </div>
             <div>
-                <pre><p id="f-D"> <i id="icons" class="fa-regular fa-circle-question"></i>  Help center</p></pre>
+                <a id="anchor" href="https://youtu.be/lnTWVAyMHg0?si=tpxT5-sYXNqmMyHq"><p id="f-D">Short video</p></a>
             </div>
             <div>
-                <p id="f-D"> 2024 Arrows.in</p>
+                <p id="f-D"> 2024 Stylike.in</p>
             </div>
             
         </div>
