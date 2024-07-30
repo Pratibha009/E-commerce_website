@@ -257,6 +257,85 @@
 
 
         </main>
+        <div class="chatbot-icon" onclick="toggleChatbot()">
+            <i class="fa fa-comments"></i>
+        </div>
+    
+        <!-- Chatbot container -->
+        <div class="chatbot-container" id="chatbot-container">
+            <div class="chat-box" id="chat-box">
+                <!-- Messages will be displayed here -->
+            </div>
+            <div class="input-container">
+                <input type="text" id="user-input" placeholder="Type a message..." onkeypress="handleKeyPress(event)">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+            <div class="button-container">
+                <button onclick="sendQuickReply('Product Inquiry')">Product Inquiry</button>
+                <button onclick="sendQuickReply('Order Tracking')">Order Tracking</button>
+                <button onclick="sendQuickReply('Customer Support')">Customer Support</button>
+            </div>
+        </div>
+    
+        <script>// script.js
+            function handleKeyPress(event) {
+                if (event.key === 'Enter') {
+                    sendMessage();
+                }
+            }
+            
+            function sendMessage() {
+                const userInput = document.getElementById('user-input');
+                const message = userInput.value.trim();
+                if (message) {
+                    displayMessage(message, 'user');
+                    userInput.value = '';
+                    // Simulate a bot response
+                    setTimeout(() => {
+                        handleBotResponse(message);
+                    }, 1000);
+                }
+            }
+            
+            function sendQuickReply(message) {
+                displayMessage(message, 'user');
+                setTimeout(() => {
+                    handleBotResponse(message);
+                }, 1000);
+            }
+            
+            function handleBotResponse(message) {
+                let response = '';
+                if (message.toLowerCase().includes('product inquiry')) {
+                    response = 'Sure! What product are you interested in? We have a wide range of products including electronics, fashion, and groceries.';
+                } else if (message.toLowerCase().includes('order tracking')) {
+                    response = 'Please provide your order number, and I will check the status for you.';
+                } else if (message.toLowerCase().includes('customer support')) {
+                    response = 'How can I assist you with customer support? You can ask about returns, refunds, or any other issues you are facing.';
+                } else {
+                    response = 'I am here to help with product inquiries, order tracking, and customer support. How can I assist you today?';
+                }
+                displayMessage(response, 'bot');
+            }
+            
+            function displayMessage(message, sender) {
+                const chatBox = document.getElementById('chat-box');
+                const messageElement = document.createElement('div');
+                messageElement.classList.add('message', sender);
+                messageElement.textContent = message;
+                chatBox.appendChild(messageElement);
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }
+            
+            function toggleChatbot() {
+                const chatbotContainer = document.getElementById('chatbot-container');
+                if (chatbotContainer.style.display === 'none' || chatbotContainer.style.display === '') {
+                    chatbotContainer.style.display = 'block';
+                } else {
+                    chatbotContainer.style.display = 'none';
+                }
+            }
+            </script>
 
 
         <footer>
@@ -323,6 +402,7 @@
                 </div>
             </div>
         </footer>
+        
     </body>
 
 </html>
